@@ -1,0 +1,227 @@
+POSITIONAL INDEX SEARCH RESULTS
+Dataset: Telugu Wikipedia
+Indexed documents: 1000
+
+5 SEARCH TEST CASES
+
+============================================================
+TEST CASE 1
+Query: గోదావరి
+Type: Term
+============================================================
+Collection Frequency (CF): 444
+Document Frequency (DF): 75
+
+Showing 3 of 75 matching documents:
+
+Document: గోదావరి నది
+Document ID: 1119
+Positions: [0, 40, 96, 130, 145, 164, 199, 203, 208, 266, 293, 360, 385, 425, 455, 493, 542, 585, 618, 741, 788, 827, 854, 879, 887, 904, 937, 941, 1037, 1061, 1094, 1107, 1133, 1150, 1156, 1168, 1197, 1210, 1217, 1228, 1236, 1282, 1295, 1318, 1323, 1363, 1396, 1414, 1427, 1494, 1532, 1537, 1555, 1567, 1623, 1641, 1650, 1769, 1813, 1817, 1820, 1823, 1868, 2030, 2051, 2112, 2128, 2149, 2198, 2211, 2251, 2336, 2356, 2360, 2373, 2419, 2425, 2442, 2456, 2477, 2486, 2537, 2582, 2587, 2625, 2641, 2649, 2665, 2670, 2677, 2698, 2711, 2723, 2808, 2813, 2830, 2920, 2938, 2940, 2943, 2950, 2965, 2974, 2980, 2988, 3021, 3023, 3049, 3062, 3064, 3071, 3086, 3095, 3116, 3139, 3153, 3189, 3197, 3323, 3346, 3361, 3437, 3460, 3479, 3487, 3503, 3513, 3548, 3609, 3645, 3653, 3660, 3732, 3747, 3781, 3787, 3871, 3901, 3912, 3950, 3956, 3960, 3975, 3982, 3988, 3991, 3994, 4001, 4036, 4041]
+
+Document: నది
+Document ID: 1147
+Positions: [270]
+
+Document: కూర్మావతారం
+Document ID: 1222
+Positions: [288]
+
+============================================================
+TEST CASE 2
+Query: తెలుగు
+Type: Term
+============================================================
+Collection Frequency (CF): 2372
+Document Frequency (DF): 585
+
+Showing 3 of 585 matching documents:
+
+Document: మొదటి పేజీ
+Document ID: 1
+Positions: [21, 44]
+
+Document: తెలుగు వ్యాకరణం
+Document ID: 1117
+Positions: [0, 3, 26, 49, 51, 53, 65, 74, 94, 97, 100]
+
+Document: గోదావరి నది
+Document ID: 1119
+Positions: [2570]
+
+============================================================
+TEST CASE 3
+Query: భారతదేశం
+Type: Term
+============================================================
+Collection Frequency (CF): 431
+Document Frequency (DF): 188
+
+Showing 3 of 188 matching documents:
+
+Document: గోదావరి నది
+Document ID: 1119
+Positions: [17, 23, 3996]
+
+Document: దర్శనీయ స్థలాలు
+Document ID: 1135
+Positions: [23]
+
+Document: శ్రీశైల క్షేత్రం
+Document ID: 1142
+Positions: [4]
+
+============================================================
+TEST CASE 4
+Query: తెలుగు భాష
+Type: Phrase
+============================================================
+Total phrase occurrences: 42
+
+Showing 3 of 42 phrase occurrences:
+
+Document: తెలుగు వ్యాకరణం
+Document ID: 1117
+Starting position: 97
+
+Document: శ్రీశ్రీ
+Document ID: 1152
+Starting position: 1487
+
+Document: సామెతల జాబితా
+Document ID: 1258
+Starting position: 4328
+
+============================================================
+TEST CASE 5
+Query: తెలుగు సాహిత్యం
+Type: Phrase
+============================================================
+Total phrase occurrences: 23
+
+Showing 3 of 23 phrase occurrences:
+
+Document: సినిమా
+Document ID: 1133
+Starting position: 708
+
+Document: ప్రబంధము
+Document ID: 1164
+Starting position: 448
+
+Document: చార్లెస్ ఫిలిప్ బ్రౌన్
+Document ID: 1181
+Starting position: 338
+
+============================================================
+10 RARE TERMS
+============================================================
+
+1. Term: అంకితమిచ్చారు
+Collection Frequency (CF): 2
+Document Frequency (DF): 2
+  Positional index examples:
+    Document: మహాప్రస్థానం
+    Document ID: 3792
+    Positions: [389]
+    Document: తిక్కన
+    Document ID: 852
+    Positions: [334]
+
+2. Term: ఘ్ని
+Collection Frequency (CF): 2
+Document Frequency (DF): 2
+  Positional index examples:
+    Document: ఆంధ్రప్రదేశ్ నదులు, ఉపనదులు
+    Document ID: 1571
+    Positions: [1545]
+    Document: పాపఘ్ని
+    Document ID: 1714
+    Positions: [98]
+
+3. Term: పూజలలో
+Collection Frequency (CF): 2
+Document Frequency (DF): 2
+  Positional index examples:
+    Document: కొండపల్లి
+    Document ID: 1538
+    Positions: [855]
+    Document: కీసర (కీసర మండలం)
+    Document ID: 2607
+    Positions: [577]
+
+4. Term: వారసుడిని
+Collection Frequency (CF): 2
+Document Frequency (DF): 2
+  Positional index examples:
+    Document: ఇందిరా గాంధీ
+    Document ID: 2502
+    Positions: [1460]
+    Document: కాకతీయులు
+    Document ID: 3489
+    Positions: [2041]
+
+5. Term: నూరి
+Collection Frequency (CF): 3
+Document Frequency (DF): 2
+  Positional index examples:
+    Document: బీరకాయ
+    Document ID: 3401
+    Positions: [363, 497]
+    Document: గోగు
+    Document ID: 3475
+    Positions: [496]
+
+6. Term: కొలతలకు
+Collection Frequency (CF): 3
+Document Frequency (DF): 3
+  Positional index examples:
+    Document: థాయిలాండ్
+    Document ID: 1529
+    Positions: [2747]
+    Document: ఆగష్టు 1
+    Document ID: 2689
+    Positions: [68]
+
+7. Term: అజ్ఞాతవాసం
+Collection Frequency (CF): 4
+Document Frequency (DF): 3
+  Positional index examples:
+    Document: మహాభారతం
+    Document ID: 1298
+    Positions: [1275]
+    Document: ఆది పర్వము
+    Document ID: 1300
+    Positions: [77]
+
+8. Term: పినతండ్రి
+Collection Frequency (CF): 4
+Document Frequency (DF): 4
+  Positional index examples:
+    Document: గోన బుద్ధారెడ్డి
+    Document ID: 1182
+    Positions: [87]
+    Document: రంగనాథ రామాయణము
+    Document ID: 1183
+    Positions: [67]
+
+9. Term: పక్కల
+Collection Frequency (CF): 5
+Document Frequency (DF): 5
+  Positional index examples:
+    Document: హనుమకొండ జిల్లా
+    Document ID: 1345
+    Positions: [1110]
+    Document: హైదరాబాదు
+    Document ID: 1395
+    Positions: [70]
+
+10. Term: అభిలాష
+Collection Frequency (CF): 10
+Document Frequency (DF): 6
+  Positional index examples:
+    Document: నాస్తికత్వం
+    Document ID: 1221
+    Positions: [536]
+    Document: ఆత్రేయ
+    Document ID: 2485
+    Positions: [540]
