@@ -9,12 +9,15 @@ DB_PATH = "index/positional_index.db"
 
 
 def build():
-    amount = input("How many articles should be indexed? (default 7): ").strip()
+    amount = input(
+        "How many articles should be indexed? "
+        "(Press Enter for default 100): "
+    ).strip()
 
     if amount:
         max_articles = int(amount)
     else:
-        max_articles = 7
+        max_articles = 100
 
     articles = load_wikipedia_articles(
         DATASET_PATH,
@@ -60,7 +63,7 @@ def search_for_phrase():
 
 def main():
     while True:
-        print("\n===== Akshara: Telugu Positional Search =====")
+        print("\n===== Telugu-PosIndex: Telugu Positional Search =====")
         print("1. Build positional index")
         print("2. Search for a word")
         print("3. Search for a phrase")
@@ -75,7 +78,7 @@ def main():
         elif choice == "3":
             search_for_phrase()
         elif choice == "4":
-            print("Exiting Akshara.")
+            print("Exiting Telugu-PosIndex.")
             break
         else:
             print("Invalid choice. Please try again.")

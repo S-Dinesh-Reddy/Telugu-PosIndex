@@ -9,8 +9,8 @@ DB_PATH = "index/positional_index.db"
 OUTPUT_PATH = "output/telugu_output.txt"
 
 MAX_EXAMPLES_PER_TEST = 3
-MAX_POSTINGS_PER_RARE_TERM = 2
 NUMBER_OF_RARE_TERMS = 10
+INDEXED_DOCUMENTS = 9000
 
 
 def write_term_result(file, query):
@@ -97,7 +97,7 @@ def get_rare_terms():
 
 def write_rare_terms(file):
     file.write("\n" + "=" * 60 + "\n")
-    file.write("10 RARE TERMS\n")
+    file.write("10 RARE TERMS WITH THEIR POSITIONAL INDEX\n")
     file.write("=" * 60 + "\n")
 
     terms = get_rare_terms()
@@ -109,7 +109,7 @@ def write_rare_terms(file):
         file.write(f"\n{number}. Term: {term}\n")
         file.write(f"Collection Frequency (CF): {cf}\n")
         file.write(f"Document Frequency (DF): {df}\n")
-        file.write("  Positional index examples:\n")
+        file.write("  Positional index:\n")
 
         cursor.execute("""
             SELECT p.doc_id, d.title, p.positions
@@ -117,8 +117,7 @@ def write_rare_terms(file):
             JOIN documents d ON p.doc_id = d.doc_id
             WHERE p.term = ?
             ORDER BY p.doc_id
-            LIMIT ?
-        """, (term, MAX_POSTINGS_PER_RARE_TERM))
+        """, (term,))
 
         rows = cursor.fetchall()
 
@@ -134,17 +133,17 @@ def main():
     os.makedirs(os.path.dirname(OUTPUT_PATH), exist_ok=True)
 
     test_cases = [
-    ("గోదావరి", "Term"),
-    ("తెలుగు", "Term"),
-    ("భారతదేశం", "Term"),
-    ("తెలుగు భాష", "Phrase"),
-    ("తెలుగు సాహిత్యం", "Phrase"),
-]
+        ("గోదావరి", "Term"),
+        ("తెలుగు", "Term"),
+        ("భారతదేశం", "Term"),
+        ("తెలుగు భాష", "Phrase"),
+        ("తెలుగు సాహిత్యం", "Phrase"),
+    ]
 
     with open(OUTPUT_PATH, "w", encoding="utf-8") as file:
         file.write("POSITIONAL INDEX SEARCH RESULTS\n")
         file.write("Dataset: Telugu Wikipedia\n")
-        file.write("Indexed documents: 1000\n")
+        file.write(f"Indexed documents: {INDEXED_DOCUMENTS}\n")
         file.write("\n5 SEARCH TEST CASES\n")
 
         for number, (query, query_type) in enumerate(test_cases, start=1):
