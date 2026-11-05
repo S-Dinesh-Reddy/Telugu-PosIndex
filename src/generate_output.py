@@ -1,4 +1,3 @@
-
 import os
 import sqlite3
 
@@ -10,7 +9,18 @@ OUTPUT_PATH = "output/telugu_output.txt"
 
 MAX_EXAMPLES_PER_TEST = 3
 NUMBER_OF_RARE_TERMS = 10
-INDEXED_DOCUMENTS = 9000
+
+
+def get_indexed_document_count():
+    connection = sqlite3.connect(DB_PATH)
+    cursor = connection.cursor()
+
+    cursor.execute("SELECT COUNT(*) FROM documents")
+    count = cursor.fetchone()[0]
+
+    connection.close()
+
+    return count
 
 
 def write_term_result(file, query):
@@ -132,26 +142,28 @@ def write_rare_terms(file):
 def main():
     os.makedirs(os.path.dirname(OUTPUT_PATH), exist_ok=True)
 
+    indexed_documents = get_indexed_document_count()
+
     test_cases = [
-        ("గోదావరి", "Term"),
-        ("తెలుగు", "Term"),
-        ("భారతదేశం", "Term"),
-        ("తెలుగు భాష", "Phrase"),
+        ("శాతవాహనులు", "Term"),
+        ("కాకతీయులు", "Term"),
+        ("అమరావతి", "Term"),
+        ("ఆంధ్రప్రదేశ్ చరిత్ర", "Phrase"),
         ("తెలుగు సాహిత్యం", "Phrase"),
     ]
 
     with open(OUTPUT_PATH, "w", encoding="utf-8") as file:
         file.write("POSITIONAL INDEX SEARCH RESULTS\n")
         file.write("Dataset: Telugu Wikipedia\n")
-        file.write(f"Indexed documents: {INDEXED_DOCUMENTS}\n")
+        file.write(f"Indexed documents: {indexed_documents}\n")
         file.write("\n5 SEARCH TEST CASES\n")
 
         for number, (query, query_type) in enumerate(test_cases, start=1):
-            file.write("\n" + "=" * 60 + "\n")
+            file.write("\n" + "=" * 40 + "\n")
             file.write(f"TEST CASE {number}\n")
             file.write(f"Query: {query}\n")
             file.write(f"Type: {query_type}\n")
-            file.write("=" * 60 + "\n")
+            file.write("=" * 40 + "\n")
 
             if query_type == "Term":
                 write_term_result(file, query)

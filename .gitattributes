@@ -1,0 +1,2 @@
+data/raw/*.bz2 filter=lfs diff=lfs merge=lfs -text
+index/*.db filter=lfs diff=lfs merge=lfs -text

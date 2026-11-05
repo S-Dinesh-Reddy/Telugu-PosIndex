@@ -4,98 +4,98 @@ Indexed documents: 9000
 
 5 SEARCH TEST CASES
 
-============================================================
+========================================
 TEST CASE 1
-Query: గోదావరి
+Query: శాతవాహనులు
 Type: Term
-============================================================
-Collection Frequency (CF): 1019
-Document Frequency (DF): 341
+========================================
+Collection Frequency (CF): 30
+Document Frequency (DF): 22
 
-Showing 3 of 341 matching documents:
+Showing 3 of 22 matching documents:
 
-Document: పెన్ గంగ
-Document ID: 10039
-Positions: [7, 211, 227]
+Document: వైఎస్‌ఆర్ కడప జిల్లా
+Document ID: 1356
+Positions: [111]
 
-Document: కట్టమూరు
-Document ID: 10092
-Positions: [10]
+Document: కూచిపూడి నృత్యం
+Document ID: 13677
+Positions: [106]
 
-Document: మొక్కపాటి నరసింహశాస్త్రి
-Document ID: 10129
-Positions: [439]
+Document: ఆదిలాబాద్ జిల్లా
+Document ID: 1390
+Positions: [229]
 
-============================================================
+========================================
 TEST CASE 2
-Query: తెలుగు
+Query: కాకతీయులు
 Type: Term
-============================================================
-Collection Frequency (CF): 8186
-Document Frequency (DF): 3517
+========================================
+Collection Frequency (CF): 63
+Document Frequency (DF): 36
 
-Showing 3 of 3517 matching documents:
+Showing 3 of 36 matching documents:
 
-Document: మొదటి పేజీ
-Document ID: 1
-Positions: [21, 44]
+Document: శ్రీశైల క్షేత్రం
+Document ID: 1142
+Positions: [49]
 
-Document: భారత జాతీయ చలనచిత్ర పురస్కారాలు - ఉత్తమ సినిమా
-Document ID: 10050
-Positions: [62]
+Document: విజయవాడ
+Document ID: 1257
+Positions: [601]
 
-Document: రావిశాస్త్రి
-Document ID: 10085
-Positions: [185, 203, 211, 275, 455, 458, 462, 469]
+Document: కర్నూలు జిల్లా
+Document ID: 1350
+Positions: [81]
 
-============================================================
+========================================
 TEST CASE 3
-Query: భారతదేశం
+Query: అమరావతి
 Type: Term
-============================================================
-Collection Frequency (CF): 745
-Document Frequency (DF): 418
+========================================
+Collection Frequency (CF): 159
+Document Frequency (DF): 81
 
-Showing 3 of 418 matching documents:
+Showing 3 of 81 matching documents:
 
-Document: అరసవిల్లి
-Document ID: 10210
-Positions: [1]
+Document: గుడివాడ (తెనాలి)
+Document ID: 10121
+Positions: [114]
 
-Document: తోలుబొమ్మలాట
-Document ID: 10267
-Positions: [223]
+Document: గుండాలపాడు
+Document ID: 10223
+Positions: [61]
 
-Document: రామాయణం
-Document ID: 10277
-Positions: [24]
+Document: బుద్దవరం
+Document ID: 10298
+Positions: [793, 797, 801]
 
-============================================================
+========================================
 TEST CASE 4
-Query: తెలుగు భాష
+Query: ఆంధ్రప్రదేశ్ చరిత్ర
 Type: Phrase
-============================================================
-Total phrase occurrences: 68
+========================================
+Total phrase occurrences: 52
 
-Showing 3 of 68 phrase occurrences:
+Showing 3 of 52 phrase occurrences:
 
-Document: విశ్వనాథ సత్యనారాయణ
-Document ID: 10300
-Starting position: 1302
+Document: సంగమ వంశం
+Document ID: 10517
+Starting position: 229
 
-Document: తెలుగు వ్యాకరణం
-Document ID: 1117
-Starting position: 97
+Document: కుతుబ్ షాహీ వంశం
+Document ID: 1429
+Starting position: 252
 
-Document: చూపులు కలిసిన శుభవేళ
-Document ID: 11331
-Starting position: 251
+Document: రాయచూర్ జిల్లా
+Document ID: 2397
+Starting position: 106
 
-============================================================
+========================================
 TEST CASE 5
 Query: తెలుగు సాహిత్యం
 Type: Phrase
-============================================================
+========================================
 Total phrase occurrences: 28
 
 Showing 3 of 28 phrase occurrences:

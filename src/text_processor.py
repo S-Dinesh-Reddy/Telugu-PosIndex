@@ -1,4 +1,3 @@
-
 import re
 import unicodedata
 
@@ -24,8 +23,6 @@ def tokenize(text):
     words = []
 
     for word in candidates:
-        # A valid token should begin with a Telugu letter,
-        # not a dependent vowel sign or combining mark.
         if unicodedata.category(word[0]).startswith("L"):
             words.append(word)
 

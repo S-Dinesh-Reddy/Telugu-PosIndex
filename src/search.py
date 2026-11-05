@@ -1,4 +1,3 @@
-
 import json
 import sqlite3
 
@@ -6,6 +5,13 @@ from text_processor import tokenize
 
 
 def search_term(term, db_path="index/positional_index.db"):
+    words = tokenize(term)
+
+    if len(words) != 1:
+        return None
+
+    term = words[0]
+
     conn = sqlite3.connect(db_path)
     cursor = conn.cursor()
 
