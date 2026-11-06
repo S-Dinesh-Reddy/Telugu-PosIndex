@@ -266,6 +266,11 @@ The output is written to:
 
 The output file is regenerated when this command is executed.
 
+The five search test queries are predefined in generate_output.py
+and are executed automatically during output generation. They consist
+of three term queries and two phrase queries. The output also includes
+ten selected rare terms with their complete positional index entries.
+
 
 8. RUNNING UNIT TESTS
 ---------------------
