@@ -4,13 +4,20 @@ TELUGU LANGUAGE POSITIONAL INDEX (Telugu-PosIndex)
 1. INTRODUCTION
 ---------------
 
-Telugu Language Positional Index is an Information Retrieval system
-developed to build a positional index for Telugu Wikipedia articles
-and support term-based and phrase-based searching.
+Telugu Language Positional Index is an Information Retrieval system 
+developed to build a positional index for Telugu Wikipedia articles and 
+support term-based and phrase-based searching. Unlike a normal inverted index 
+that records only the documents containing a term, a positional index stores 
+the exact positions of terms within each document. This positional information 
+enables phrase searching by verifying whether the query terms occur consecutively 
+and in the specified order. As a result, the system can retrieve documents containing
+an exact phrase rather than merely documents containing all the individual query terms.
 
-For every term, the index stores its Collection Frequency (CF),
-Document Frequency (DF), and the positions at which it occurs in
-each document.
+For every term, the index stores its Collection Frequency (CF), Document Frequency (DF),
+and the positions at which it occurs in each document. These positional entries are used
+to perform phrase searches by checking whether consecutive query terms appear at adjacent positions
+and in the correct order. This allows the system to identify documents containing the exact phrase
+without maintaining a separate index for every possible phrase.
 
 The system is implemented in Python. The vocabulary and term
 statistics are maintained in main memory, while the postings lists
@@ -38,10 +45,10 @@ dataset into memory.
 The pre-built positional index and the generated output were created
 using 9,000 Telugu Wikipedia articles.
 
-The dataset is not included in the source code ZIP because of its
-large size. It can be obtained from the Wikimedia dumps website:
-
-https://dumps.wikimedia.org/tewiki/
+The dataset and the pre-built positional index are large files and are
+not included in the source code ZIP because of their large size.
+However both are included in the Github Repository. The Repository link and 
+the direct dataset download link are provided in Section 11 at the end of this README.
 
 
 3. REQUIREMENTS AND SETUP
@@ -59,6 +66,26 @@ Note:
 On my Windows system, the 'python' command was not recognized in
 PowerShell. The Python launcher 'py' works, so the commands below
 use 'py'.
+
+
+TYPING TELUGU TEXT FOR SEARCH
+---------------------------------
+The program supports searching for Telugu words and phrases. Users can enter Telugu text using a 
+Telugu keyboard or an online Telugu transliteration tool.
+
+Method 1: Using Telugu Transliteration
+1. Open an online Telugu transliteration tool, such as Google Input Tools.
+2. Select Telugu as the input language.
+3. Type the required word using English letters. For example, typing "namaskaram" may produce "నమస్కారం".
+4. Copy the Telugu text and paste it into the program's search prompt.
+
+Method 2: Using the Telugu Keyboard in Windows
+1. Open Settings → Time & Language → Language & Region.
+2. Add Telugu as a language and install its keyboard.
+3. Switch to the Telugu keyboard using Win + Space.
+4. Type the required Telugu word or phrase in the terminal.
+
+In this way, you can type Telugu words directly using a Telugu keyboard or an online Telugu transliteration tool.
 
 
 4. RUNNING THE PROGRAM
@@ -337,11 +364,9 @@ Telugu-PosIndex/
 Source Code Repository:
 https://github.com/S-Dinesh-Reddy/Telugu-PosIndex
 
-Telugu Wikipedia Dump:
-https://dumps.wikimedia.org/tewiki/
+Telugu Language Wikipedia Dataset (Direct Download):
+https://dumps.wikimedia.org/tewiki/latest/tewiki-latest-pages-articles.xml.bz2
 
-The complete dataset and the pre-built positional index are large
-files and are not included in the source code ZIP.
-
-The dataset can be downloaded from Wikimedia. The pre-built index
-is used to run the search queries and generate the submitted output.
+The complete dataset and the pre-built positional index are available in the GitHub repository.
+The dataset can also be downloaded directly from Wikimedia using the link provided above.
+The pre-built index can be used to run search queries without rebuilding the index.
